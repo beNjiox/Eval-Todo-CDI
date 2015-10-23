@@ -33,13 +33,13 @@ Ajouter un "item" a notre todo
 POST /items
 
 — prends en parametre un objet 
-  — exemple: { item: "Acheter le pain" }
+  — exemple: `{ item: "Acheter le pain" }`
 — en cas de succés retourne 
 	— status 201
-	— { message: "Item added" }
+	— `{ message: "Item added" }`
 — en cas d'erreur (chaine ayant moins de 3 lettres), retourne
 	— 400
-	- {message: "Error while adding an item"}
+	- `{message: "Error while adding an item"}`
 
 — L'interface doit afficher un champs vide ou on pourra ecrire un text ainsi qu'un bouton "Ajouter"
 — L'interface doit afficher le message renvoyé apres un click sur "Ajouter"
