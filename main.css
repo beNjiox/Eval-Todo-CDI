@@ -1,0 +1,13 @@
+body {
+	font-family: tahoma;
+	font-size:15px;
+}
+
+li {
+	list-style-type: none;
+	padding:10px;
+}
+
+li + li {
+	border-top:1px solid #e6e6e6;
+}
