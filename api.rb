@@ -24,15 +24,18 @@ end
 #
 ################################
 post '/items' do
-	if params['item'] != ""
+	if params['item'] == ""
+		status(400)
+		json({message: "You have to submit an item"})
+	elsif params['item'].length <= 3
+		status(400)
+		json({message: "Your item should at least contains 4 characters"})		
+	else
 		status(201)
 		id = id + 1
 		new_item = { item: params['item'], id: id, status: false }
 		todo << new_item
 		json({item: new_item, message: 'Item Added'})
-	else
-		status(400)
-		json({message: "You have to submit an item"})
 	end
 end
 
